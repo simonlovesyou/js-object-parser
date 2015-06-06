@@ -69,9 +69,11 @@ var ObjectParser = function () {
 						lvls[i][k] = brktLvls[j];
 					} else if(lvls[i][k][0] < brktLvls[j][0] 
 						&& lvls[i][k][1] < brktLvls[j][1] 
-						&& (lvls[i][k][1] - lvls[i][k][0]) < (bLvl[j][1] - bLvl[j][0])) {
-						good = true;
-					} else good = false;
+						|| (lvls[i][k][1] - lvls[i][k][0]) <= (brktLvls[j][1] - brktLvls[j][0])) {
+						good = true;	
+					} else {
+						good = false
+					};
 					
 					for(var b = 0; b < lvls.length; b++) {
 						for(var e = 0; e < lvls[b].length; e++) {
