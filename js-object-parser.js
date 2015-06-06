@@ -1,5 +1,3 @@
-var async = require('async');
-
 var ObjectParser = function () {
 	this.arrayCompare = function (arr1, arr2) {
     // if any array is falsy, return false 
@@ -91,23 +89,6 @@ var ObjectParser = function () {
 	}
 };
 
-function test() {
-
-	var myObjectString = "{a:{b:{c:{d:{e:f}}}}, c:e}";
-
-	var objParser = new ObjectParser();
-
-	var result = objParser.parse(myObjectString);
-	console.log("JAG SKICKADE IN:");
-	console.log(myObjectString)
-
-	console.log("JAG FICK:");
-	console.log(JSON.stringify(result));
-}
-var addingTo = [];
-
-
-
 ObjectParser.prototype.parse = function(arg) {
 
 	//Remove every whitespace
@@ -138,5 +119,3 @@ ObjectParser.prototype.parse = function(arg) {
 
 	return parseObj(limits, arg, 0);
 } 
-
-test();
