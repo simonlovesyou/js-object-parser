@@ -2,8 +2,8 @@
 A library for parsing a string to a javascript object. 
 
 Main difference between the JSON.parse function and this function is that js-object-parser will be able to parse 
-```"{A:b, C:d, E:{any-object:{a:1, b:2}}"```, where JSON.parse fails as it requires every property to be wrapped in quotationmarks, i.e:
-```"{"A":"b", "C":"d", "E":{"any-object":{"a":1, "b":2}}" ```
+```"{A:b, C:d, E:{any-object:{a:1, b:2}}}"```, where JSON.parse fails as it requires every property to be wrapped in quotationmarks, i.e:
+```"{"A":"b", "C":"d", "E":{"any-object":{"a":1, "b":2}}}" ```
 
 ### Example / Usage
 Add it to your project by
@@ -22,6 +22,15 @@ console.log(objectParser.parse('{A:b, C:d}'));
 //Outputs: {A: 'b', C: 'd'}
 	
 ```
+It can handle nested objects:
+
+```javascript
+
+console.log(objectParser.parse('{A:{BCDEF:{G:h}, I:j}}'));
+//Outputs: { A: { BCDEF: { G: 'h' }, I: 'j' } }
+	
+```
+
 
 ### TODO
 Features I or contributers will hopefully soon implement.
