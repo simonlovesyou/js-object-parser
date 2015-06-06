@@ -119,3 +119,5 @@ ObjectParser.prototype.parse = function(arg) {
 
 	return parseObj(limits, arg, 0);
 } 
+
+module.exports = objectParser;
