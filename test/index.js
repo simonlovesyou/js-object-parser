@@ -30,13 +30,11 @@ describe("js-object-parser", () => {
       t1: 'str + number'
     };
 
-    console.log(obj);
-    console.log(objEqual);
-
     assert.deepEqual(jsObjectParser.parse(obj), objEqual, 'should be equal');
+
   });
 
-  it("should parse javascript object mixed with JSON-style keys.", () => {
+  it("should parse javascript object mixed with JSON-style properties.", () => {
     let obj = 
     '{'+
       '"ST": "String",'+
