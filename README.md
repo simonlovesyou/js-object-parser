@@ -18,8 +18,8 @@ var ObjectParser = require('js-object-parser');
 
 var objectParser = new ObjectParser(); 
 
-console.log(objectParser.parse('{A:b, C:d}'));
-//Outputs: {A: 'b', C: 'd'}
+console.log(objectParser.parse('{A:b, C:[1,2,"3"]}'));
+//Outputs: {A: 'b', C: [1,2,"3"]}
 	
 ```
 It can handle nested objects:
@@ -31,17 +31,19 @@ console.log(objectParser.parse('{A:{BCDEF:{G:h}, I:j}}'));
 	
 ```
 
+### Test
 
-### TODO
-Features I or contributers will hopefully soon implement.
-
-- Add support for arrays.
-- Add errorhandling.
-- Add testing.
-
-### Known issues
-- Will fail on arrays.
-- Will fail on unbalanced brackets.
+For testing, run 
+```
+# Clone repository
+git clone https://github.com/simonlovesyou/js-object-parser.git
+# Navigate into project folder
+cd js-object-parser
+# Install dependencies
+npm install 
+# Run tests
+npm test
+```
 
 ### Creator
 [simonlovesyou](https://github.com/simonlovesyou)
@@ -53,4 +55,5 @@ Copyright (c) 2015 Simon Johansson
 
 JohanssonLSimon@gmail.com
 
+[Website](http://www.simonsager.se)
 [Twitter](https://twitter.com/simonjohansosn)
