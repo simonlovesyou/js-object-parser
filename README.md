@@ -14,20 +14,18 @@ Add it to your project by
 In your program
 
 ```javascript
-var ObjectParser = require('js-object-parser');
+import objectParser from 'js-object-parser';
 
-var objectParser = new ObjectParser(); 
-
-console.log(objectParser.parse('{A:b, C:[1,2,"3"]}'));
-//Outputs: {A: 'b', C: [1,2,"3"]}
+console.log(objectParser.parse('{A:"b", C:[1,2,"3"]}'));
+//Outputs: {A: "b", C: [1,2,"3"]}
 	
 ```
 It can handle nested objects:
 
 ```javascript
 
-console.log(objectParser.parse('{A:{BCDEF:{G:h}, I:j}}'));
-//Outputs: { A: { BCDEF: { G: 'h' }, I: 'j' } }
+console.log(objectParser.parse('{A:{BCDEF:{G:"h"}, I:"j"}}'));
+//Outputs: { A: { BCDEF: { G: "h" }, I: "j" } }
 	
 ```
 
