@@ -1,11 +1,8 @@
 'use strict';
 
 let parse = (string) => {
-
-  let newStr = string.replace(/"?([a-zA-Z]*)"?:/g, '"$1":');
-
   try {
-    return JSON.parse(newStr);
+    return JSON.parse(string.replace(/"?([a-zA-Z0-9]*)"?:/g, '"$1":'));
   } catch(err) {
     return err;
   }
