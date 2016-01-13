@@ -16,7 +16,8 @@ describe("js-object-parser", () => {
       'b: true,'+ 
       'arr: [1,2,"3",{foo: \"bar\"},5],'+
       'numbr: 6,'+
-      'o: {}' +
+      'o: {},' +
+      't1: "str + number"' +
     '}';
 
     let objEqual = 
@@ -25,8 +26,13 @@ describe("js-object-parser", () => {
       b: true,
       arr: [1,2,"3",{foo: "bar"},5],
       numbr: 6,
-      o: {}
+      o: {},
+      t1: 'str + number'
     };
+
+    console.log(obj);
+    console.log(objEqual);
+
     assert.deepEqual(jsObjectParser.parse(obj), objEqual, 'should be equal');
   });
 
@@ -48,17 +54,5 @@ describe("js-object-parser", () => {
     };
 
     assert.deepEqual(jsObjectParser.parse(obj), objEqual, 'should be equal');
-  });
-
-  it("should throw exception when trying to parse number for key", () => {
-    let obj = 
-    '{'+
-      '"5": "fail"' + 
-    '}';
-
-    console.log(JSON.parse(obj));
-
-    assert.throws(() => {return JSON.parse(obj);})
-
   });
 });
