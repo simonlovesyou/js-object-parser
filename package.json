@@ -1,8 +1,8 @@
 {
   "name": "js-object-parser",
-  "version": "0.1.1",
-  "description": "A library for parsing from string to object.",
-  "main": "js-object-parser",
+  "version": "1.0.0",
+  "description": "A library for parsing a javascript style object. Can handle regular JSON aswell.",
+  "main": "js-object-parser.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/simonlovesyou/js-object-parser.git"
@@ -14,10 +14,18 @@
     "parser",
     "parse"
   ],
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "grunt": "^0.4.5",
+    "grunt-babel": "^5.0.3",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-eslint": "^17.3.1",
+    "mocha": "^2.3.3"
+  },
   "author": "Simon Johansson",
   "license": {
     "type": "MIT",
-    "url": "https://github.com/simonlovesyou/js-object-parser/blob/master/MIT-LICENSE.txt"
+    "url": "https://github.com/simonlovesyou/js-object-parser/blob/master/MIT-LICENSE"
   },
   "bugs": {
     "url": "https://github.com/simonlovesyou/js-object-parser/issues"
