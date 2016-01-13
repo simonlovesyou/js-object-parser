@@ -22,6 +22,9 @@
     "grunt-eslint": "^17.3.1",
     "mocha": "^2.3.3"
   },
+  "scripts": {
+    "test": "mocha test/index.js"
+  },
   "author": "Simon Johansson",
   "license": {
     "type": "MIT",
