@@ -1,6 +1,6 @@
 {
   "name": "js-object-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A library for parsing a javascript style object. Can handle regular JSON aswell.",
   "main": "js-object-parser.js",
   "repository": {
